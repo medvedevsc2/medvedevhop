@@ -1,13 +1,11 @@
-package com.example.medvedev.hop;
+package com.example.medvedev;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Medvedev$hopApplication {
-
+public class MedvedevhopApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(Medvedev$hopApplication.class, args);
+		SpringApplication.run(MedvedevhopApplication.class, args);
 	}
-
 }

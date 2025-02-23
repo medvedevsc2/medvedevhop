@@ -1,4 +1,4 @@
-package com.example.medvedev.hop;
+package com.example.medvedev;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
