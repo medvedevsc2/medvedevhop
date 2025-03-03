@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class MedvedevhopApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(MedvedevhopApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MedvedevhopApplication.class, args);
+    }
 }
