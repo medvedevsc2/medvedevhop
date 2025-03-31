@@ -10,10 +10,10 @@ import org.slf4j.LoggerFactory;
 @SpringBootApplication
 public class MedvedevhopApplication extends SpringBootServletInitializer {
 
-    private static final Logger logger = LoggerFactory.getLogger(MedvedevhopApplication.class);
+    private static final Logger loger = LoggerFactory.getLogger(MedvedevhopApplication.class);
 
     public static void main(String[] args) {
-        logger.info("Starting MedvedevhopApplication...");
+        loger.info("Starting MedvedevhopApplication...");
         SpringApplication.run(MedvedevhopApplication.class, args);
     }
 

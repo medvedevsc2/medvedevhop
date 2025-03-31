@@ -29,8 +29,6 @@ public class SneakerService {
         return sneakerMapper.toDto(sneaker);
     }
 
-
-
     public List<GetSneakerDto> getAllSneakers() {
         return sneakerMapper.toDtos(sneakerRepository.findAll());
     }
