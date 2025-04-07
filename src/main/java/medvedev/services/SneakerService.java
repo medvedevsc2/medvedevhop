@@ -1,5 +1,9 @@
 package medvedev.services;
 
+import jakarta.persistence.PersistenceException;
+import jakarta.transaction.Transactional;
+import java.util.List;
+import lombok.RequiredArgsConstructor;
 import medvedev.dao.create.CreateSneakerDto;
 import medvedev.dao.entities.Sneaker;
 import medvedev.dao.get.GetSneakerDto;
@@ -8,10 +12,6 @@ import medvedev.dao.repository.SneakerRepository;
 import medvedev.errors.CannotDeleteSneakerException;
 import medvedev.errors.ErrorMessages;
 import medvedev.errors.ResourceNotFoundException;
-import jakarta.persistence.PersistenceException;
-import jakarta.transaction.Transactional;
-import java.util.List;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service

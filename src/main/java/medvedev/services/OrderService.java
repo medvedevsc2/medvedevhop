@@ -1,24 +1,24 @@
 package medvedev.services;
 
-import medvedev.dao.create.CreateOrderDto;
-import medvedev.dao.entities.Order;
-import medvedev.dao.entities.Sneaker;
-import medvedev.dao.entities.Client;
-import medvedev.dao.get.GetOrderDto;
-import medvedev.dao.mappers.OrderMapper;
-import medvedev.dao.repository.OrderRepository;
-import medvedev.dao.repository.SneakerRepository;
-import medvedev.dao.repository.ClientRepository;
-import medvedev.enums.OrderStatus;
-import medvedev.errors.ErrorMessages;
-import medvedev.errors.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import medvedev.dao.create.CreateOrderDto;
+import medvedev.dao.entities.Client;
+import medvedev.dao.entities.Order;
+import medvedev.dao.entities.Sneaker;
+import medvedev.dao.get.GetOrderDto;
+import medvedev.dao.mappers.OrderMapper;
+import medvedev.dao.repository.ClientRepository;
+import medvedev.dao.repository.OrderRepository;
+import medvedev.dao.repository.SneakerRepository;
+import medvedev.enums.OrderStatus;
+import medvedev.errors.ErrorMessages;
+import medvedev.errors.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.server.ResponseStatusException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 @Service
 @RequiredArgsConstructor
@@ -41,7 +41,8 @@ public class OrderService {
         // Fetch sneakers based on the sneakerIds from the DTO
         List<Sneaker> sneakers = sneakerRepository.findAllById(createOrderDto.getSneakerIds());
         if (sneakers.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, ErrorMessages.NO_VALID_SNEAKERS);
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    ErrorMessages.NO_VALID_SNEAKERS);
         }
 
         // Create a new order with the status "CREATED"

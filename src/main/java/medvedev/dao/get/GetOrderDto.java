@@ -1,10 +1,10 @@
 package medvedev.dao.get;
 
-import medvedev.enums.OrderStatus;
 import java.time.LocalDateTime;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
+import medvedev.enums.OrderStatus;
 
 @Getter
 @Setter

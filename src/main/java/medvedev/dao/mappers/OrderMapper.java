@@ -6,7 +6,8 @@ import medvedev.dao.get.GetOrderDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring", config = BaseMapper.class, uses = {ClientMapper.class, SneakerMapper.class})
+@Mapper(componentModel = "spring", config = BaseMapper.class,
+        uses = {ClientMapper.class, SneakerMapper.class})
 public interface OrderMapper extends BaseMapper<Order, GetOrderDto> {
 
     @Override

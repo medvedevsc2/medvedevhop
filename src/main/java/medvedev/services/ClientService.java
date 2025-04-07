@@ -1,5 +1,10 @@
 package medvedev.services;
 
+import jakarta.transaction.Transactional;
+import jakarta.validation.ValidationException;
+import java.util.List;
+import java.util.Optional;  // Import Optional
+import lombok.RequiredArgsConstructor;
 import medvedev.dao.create.CreateClientDto;
 import medvedev.dao.entities.Client;
 import medvedev.dao.get.GetClientDto;
@@ -7,11 +12,6 @@ import medvedev.dao.mappers.ClientMapper;
 import medvedev.dao.repository.ClientRepository;
 import medvedev.errors.ErrorMessages;
 import medvedev.errors.ResourceNotFoundException;
-import jakarta.transaction.Transactional;
-import jakarta.validation.ValidationException;
-import java.util.List;
-import java.util.Optional;  // Import Optional
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -22,7 +22,7 @@ public class ClientService {
     private final ClientMapper clientMapper;
 
     public GetClientDto getClientById(Long id) {
-        Optional<Client> clientOptional =clientRepository.findById(id); // Use Optional
+        Optional<Client> clientOptional = clientRepository.findById(id); // Use Optional
         if (clientOptional.isEmpty()) {
             throw new ResourceNotFoundException(
                     String.format(ErrorMessages.USER_NOT_FOUND, id)

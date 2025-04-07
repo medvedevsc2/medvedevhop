@@ -1,7 +1,10 @@
 package medvedev.dao.mappers;
 
 import java.util.List;
-import org.mapstruct.*;
+import org.mapstruct.MapperConfig;
+import org.mapstruct.NullValueMappingStrategy;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.ReportingPolicy;
 
 @MapperConfig(
         componentModel = "spring",

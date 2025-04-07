@@ -65,6 +65,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<Map<String, String>> handleDataIntegrityViolation() {
         return ResponseEntity.status(HttpStatus.CONFLICT)
-                .body(Map.of("error", "Cannot delete the sneaker because it is used in orders")); // Updated to reflect sneakers
+                .body(Map.of("error",
+                        "Cannot delete the sneaker because it is used in orders"));
     }
 }
