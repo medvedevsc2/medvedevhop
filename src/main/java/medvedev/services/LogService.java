@@ -1,16 +1,12 @@
 package medvedev.services;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 
 
@@ -30,7 +26,7 @@ public class LogService {
         }
 
         // Имя нового лог-файла
-        String newLogFileName = String.format("application.log.%s.log", date);
+        String newLogFileName = String.format("application.%s.log", date);
         File newLogFile = new File(LOG_DIRECTORY + newLogFileName);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(commonLogFile));
