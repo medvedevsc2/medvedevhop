@@ -331,3 +331,183 @@
 2025-04-21 10:10:50 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
 2025-04-21 10:10:50 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method called: SneakerCacheService.autoClearCache()
 2025-04-21 10:10:50 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:11:11 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-04-21 10:11:11 INFO  [Thread-11] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:11 INFO  [Thread-11] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-21 10:11:11 INFO  [Thread-11] o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-04-21 10:11:11 INFO  [Thread-11] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:11 INFO  [Thread-11] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:11 INFO  [Thread-11] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21 10:11:11 INFO  [Thread-11] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2025-04-21 10:11:11 INFO  [Thread-11] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2025-04-21 10:11:12 INFO  [restartedMain] medvedev.MedvedevhopApplication - Starting MedvedevhopApplication...
+2025-04-21 10:11:12 INFO  [restartedMain] medvedev.MedvedevhopApplication - Starting MedvedevhopApplication using Java 23.0.2 with PID 3088 (C:\Users\User\IdeaProjects\matvei2\target\classes started by User in C:\Users\User\IdeaProjects\matvei2)
+2025-04-21 10:11:12 INFO  [restartedMain] medvedev.MedvedevhopApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 10:11:12 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21 10:11:12 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2025-04-21 10:11:12 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 10:11:12 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:12 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-21 10:11:12 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-04-21 10:11:12 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-21 10:11:12 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 512 ms
+2025-04-21 10:11:12 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21 10:11:12 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2025-04-21 10:11:12 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@32b5626c
+2025-04-21 10:11:12 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2025-04-21 10:11:12 INFO  [restartedMain] SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-04-21 10:11:12 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-21 10:11:12 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21 10:11:13 INFO  [restartedMain] medvedev.services.ClientCache - ClientCache инициализирован
+2025-04-21 10:11:13 INFO  [restartedMain] medvedev.services.OrderCache - OrderCache инициализирован
+2025-04-21 10:11:13 INFO  [restartedMain] m.services.SneakerCacheService - SneakerCacheService инициализирован
+2025-04-21 10:11:13 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-21 10:11:13 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:13 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-21 10:11:13 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:11:13 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:11:13 INFO  [restartedMain] medvedev.MedvedevhopApplication - Started MedvedevhopApplication in 1.375 seconds (process running for 1444.831)
+2025-04-21 10:11:13 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:11:13 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-21 10:11:14 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-04-21 10:11:14 INFO  [Thread-15] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:14 INFO  [Thread-15] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-04-21 10:11:14 INFO  [Thread-15] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:14 INFO  [Thread-15] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:14 INFO  [Thread-15] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21 10:11:14 INFO  [Thread-15] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2025-04-21 10:11:14 INFO  [Thread-15] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2025-04-21 10:11:14 INFO  [restartedMain] medvedev.MedvedevhopApplication - Starting MedvedevhopApplication...
+2025-04-21 10:11:14 INFO  [restartedMain] medvedev.MedvedevhopApplication - Starting MedvedevhopApplication using Java 23.0.2 with PID 3088 (C:\Users\User\IdeaProjects\matvei2\target\classes started by User in C:\Users\User\IdeaProjects\matvei2)
+2025-04-21 10:11:14 INFO  [restartedMain] medvedev.MedvedevhopApplication - No active profile set, falling back to 1 default profile: "default"
+2025-04-21 10:11:15 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-21 10:11:15 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 JPA repository interfaces.
+2025-04-21 10:11:15 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-21 10:11:15 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:15 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-21 10:11:15 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2025-04-21 10:11:15 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-21 10:11:15 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 439 ms
+2025-04-21 10:11:15 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-21 10:11:15 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2025-04-21 10:11:15 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@52787f8f
+2025-04-21 10:11:15 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2025-04-21 10:11:15 INFO  [restartedMain] SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2025-04-21 10:11:15 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-21 10:11:15 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-21 10:11:15 INFO  [restartedMain] medvedev.services.ClientCache - ClientCache инициализирован
+2025-04-21 10:11:15 INFO  [restartedMain] medvedev.services.OrderCache - OrderCache инициализирован
+2025-04-21 10:11:15 INFO  [restartedMain] m.services.SneakerCacheService - SneakerCacheService инициализирован
+2025-04-21 10:11:16 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-21 10:11:16 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-21 10:11:16 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-21 10:11:16 INFO  [restartedMain] medvedev.MedvedevhopApplication - Started MedvedevhopApplication in 1.281 seconds (process running for 1447.587)
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:11:16 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-21 10:11:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:11:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:12:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:12:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:13:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:13:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:14:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:14:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:15:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:15:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:16:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:16:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:17:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:17:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:18:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:18:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:19:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:19:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:20:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:20:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:21:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:21:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: ClientCache.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.services.ClientCache - Автоматическая очистка кеша клиентов...
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: ClientCache.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: OrderCache.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.services.OrderCache - Автоматическая очистка кеша заказов...
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: OrderCache.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Executing method: SneakerCacheService.autoClearCache()
+2025-04-21 10:22:16 INFO  [scheduling-1] m.services.SneakerCacheService - Автоматическая очистка кеша...
+2025-04-21 10:22:16 INFO  [scheduling-1] medvedev.aspect.LoggingAspect - Method completed: SneakerCacheService.autoClearCache()
