@@ -14,4 +14,6 @@ public class ErrorMessages {
     public static final String SNEAKER_NOT_FOUND = "Sneaker with id %d not found";
     public static final String EMAIL_EXISTS = "User with email %s already exists";
     public static final String NO_VALID_SNEAKERS = "No valid sneakers found for the given IDs";
+    public static final String NO_SNEAKERS_FOUND_BY_BRAND =
+            "No sneakers found with the brand '%s'!";
 }

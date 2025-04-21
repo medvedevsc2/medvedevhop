@@ -1,5 +1,6 @@
 package medvedev.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import medvedev.dao.create.CreateClientDto;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+@Tag(name = "Запросы ингредментов", description = "CRUD operations for ingredients")
 @RestController
 @RequestMapping("/clients")
 @RequiredArgsConstructor
@@ -37,13 +40,19 @@ public class ClientController {
     }
 
     @PutMapping("/{id}")
-    public GetClientDto updateClient(@PathVariable Long id, @RequestBody
-        CreateClientDto createClientDto) {
+    public GetClientDto updateClient(@PathVariable Long id,
+                                     @RequestBody CreateClientDto createClientDto) {
         return clientService.updateClient(id, createClientDto);
     }
 
     @DeleteMapping("/{id}")
     public void deleteClient(@PathVariable Long id) {
         clientService.deleteClient(id);
+    }
+
+    // ✅ Новый фильтр по бренду кроссовок
+    @GetMapping("/by-sneaker-brand/{brand}")
+    public List<GetClientDto> getClientsBySneakerBrand(@PathVariable String brand) {
+        return clientService.getClientsBySneakerBrand(brand);
     }
 }

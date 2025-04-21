@@ -1,88 +1,96 @@
 package medvedev.services;
 
-import jakarta.transaction.Transactional;
-import jakarta.validation.ValidationException;
 import java.util.List;
-import java.util.Optional;  // Import Optional
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import medvedev.dao.create.CreateClientDto;
 import medvedev.dao.entities.Client;
 import medvedev.dao.get.GetClientDto;
 import medvedev.dao.mappers.ClientMapper;
 import medvedev.dao.repository.ClientRepository;
-import medvedev.errors.ErrorMessages;
-import medvedev.errors.ResourceNotFoundException;
+import medvedev.services.ClientCache;
 import org.springframework.stereotype.Service;
 
+
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ClientService {
 
     private final ClientRepository clientRepository;
     private final ClientMapper clientMapper;
+    private final ClientCache clientCache;
 
+    /**
+     * Создание нового клиента.
+     * После сохранения — кеш очищается.
+     */
+    public GetClientDto createClient(CreateClientDto dto) {
+        Client client = clientMapper.toEntity(dto);
+        Client saved = clientRepository.save(client);
+        clientCache.clear(); // очищаем кеш, чтобы он не содержал устаревшие данные
+        return clientMapper.toDto(saved);
+    }
+
+    /**
+     * Получение клиента по ID.
+     */
     public GetClientDto getClientById(Long id) {
-        Optional<Client> clientOptional = clientRepository.findById(id); // Use Optional
-        if (clientOptional.isEmpty()) {
-            throw new ResourceNotFoundException(
-                    String.format(ErrorMessages.USER_NOT_FOUND, id)
-            );
-        }
-        Client client = clientOptional.get(); // Get the Client from Optional
-
+        Client client = clientRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Client not found"));
         return clientMapper.toDto(client);
     }
 
-    @Transactional
-    public GetClientDto createClient(CreateClientDto createClientDto) {
-        if (clientRepository.existsByEmail(createClientDto.getEmail())) {
-            throw new ValidationException(
-                    String.format(ErrorMessages.EMAIL_EXISTS, createClientDto.getEmail())
-            );
-        }
-
-        Client client = clientMapper.toEntity(createClientDto);
-        client = clientRepository.save(client);
-
-        return clientMapper.toDto(client);
-    }
-
-    @Transactional
-    public GetClientDto updateClient(Long id, CreateClientDto createClientDto) {
-        Optional<Client> clientOptional = clientRepository.findById(id); // Use Optional
-        if (clientOptional.isEmpty()) {
-            throw new ResourceNotFoundException(
-                    String.format(ErrorMessages.USER_NOT_FOUND, id)
-            );
-        }
-        Client client = clientOptional.get(); // Get the Client from Optional
-
-        boolean emailExists = clientRepository.existsByEmail(createClientDto.getEmail());
-        boolean isDifferentEmail = !client.getEmail().equals(createClientDto.getEmail());
-
-        if (emailExists && isDifferentEmail) {
-            throw new ValidationException(
-                    String.format(ErrorMessages.EMAIL_EXISTS, createClientDto.getEmail())
-            );
-        }
-
-        clientMapper.updateClientFromDto(createClientDto, client);
-        client = clientRepository.save(client);
-
-        return clientMapper.toDto(client);
-    }
-
-    @Transactional
-    public void deleteClient(Long id) {
-        if (!clientRepository.existsById(id)) {
-            throw new ResourceNotFoundException(
-                    String.format(ErrorMessages.USER_NOT_FOUND, id)
-            );
-        }
-        clientRepository.deleteById(id);
-    }
-
+    /**
+     * Получение всех клиентов.
+     */
     public List<GetClientDto> getAllClients() {
-        return clientMapper.toDtos(clientRepository.findAll());
+        return clientRepository.findAll().stream()
+                .map(clientMapper::toDto)
+                .toList();
+    }
+
+    /**
+     * Обновление данных клиента.
+     * После сохранения — кеш очищается.
+     */
+    public GetClientDto updateClient(Long id, CreateClientDto dto) {
+        Client existingClient = clientRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Client not found"));
+
+        clientMapper.updateClientFromDto(dto, existingClient);
+        Client updated = clientRepository.save(existingClient);
+        clientCache.clear(); // очищаем кеш
+        return clientMapper.toDto(updated);
+    }
+
+    /**
+     * Удаление клиента.
+     * После удаления — кеш очищается.
+     */
+    public void deleteClient(Long id) {
+        clientRepository.deleteById(id);
+        clientCache.clear(); // очищаем кеш
+    }
+
+    /**
+     * Получение клиентов по бренду кроссовок с кешированием.
+     */
+    public List<GetClientDto> getClientsBySneakerBrand(String brand) {
+        // Проверка, есть ли в кеше
+        log.info("Getting client by sneaker brand {}", brand);
+        if (clientCache.contains(brand)) {
+            log.info("Getting client by sneaker brand {}", brand);
+            return clientCache.get(brand);
+        }
+
+        // Если нет — загрузка из БД и сохранение в кеш
+        List<Client> clients = clientRepository.findClientsBySneakerBrand(brand);
+        List<GetClientDto> result = clients.stream()
+                .map(clientMapper::toDto)
+                .toList();
+
+        clientCache.put(brand, result);
+        return result;
     }
 }

@@ -20,6 +20,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+
 @Service
 @RequiredArgsConstructor
 @Transactional
@@ -29,6 +30,31 @@ public class OrderService {
     private final ClientRepository clientRepository;
     private final SneakerRepository sneakerRepository;
     private final OrderMapper orderMapper;
+    private final OrderCache orderCache;  // Внедряем кэш
+
+    // Метод для получения заказов по бренду кроссовок
+    public List<GetOrderDto> getOrdersBySneakerBrand(String brand) {
+        // Проверяем, есть ли данные в кэше
+        List<Order> cachedOrders = orderCache.getOrdersByBrandFromCache(brand);
+        if (cachedOrders != null) {
+            // Если данные в кэше есть, возвращаем их
+            return orderMapper.toDtos(cachedOrders);
+        }
+
+        // Если данных нет в кэше, выполняем запрос в базу данных
+        List<Order> orders = orderRepository.findOrdersBySneakerBrand(brand);
+        if (orders.isEmpty()) {
+            throw new ResourceNotFoundException(
+                    String.format(ErrorMessages.ORDER_NOT_FOUND, brand)
+            );
+        }
+
+        // Сохраняем результаты в кэш
+        orderCache.addOrdersByBrandToCache(brand, orders);
+
+        // Возвращаем результат
+        return orderMapper.toDtos(orders);
+    }
 
     @Transactional
     public GetOrderDto createOrder(CreateOrderDto createOrderDto) {

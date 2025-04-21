@@ -25,7 +25,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long clientId;
 
-    private String clientname;
+    private String name;
     private String email;
     private String password; // Added password field for user registration
 

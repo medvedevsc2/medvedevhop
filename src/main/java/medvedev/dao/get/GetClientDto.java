@@ -7,7 +7,6 @@ import lombok.Setter;
 @Setter
 public class GetClientDto {
     private Long clientId;
-    private String clientname;
+    private String name;
     private String email;
-
 }

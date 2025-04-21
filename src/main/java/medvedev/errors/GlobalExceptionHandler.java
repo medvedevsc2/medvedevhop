@@ -2,7 +2,7 @@ package medvedev.errors;
 
 import java.util.HashMap;
 import java.util.Map;
-import org.apache.coyote.BadRequestException;
+import medvedev.errors.BadRequestException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

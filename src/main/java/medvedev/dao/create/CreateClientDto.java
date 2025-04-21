@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CreateClientDto {
-    private String clientname;
+    private String name;
     private String email;
-    private String password; // Added password field for user registration
+    private String password;
 }
